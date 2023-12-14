@@ -39,9 +39,6 @@ importers:
       vite:
         specifier: ^4.0.5
         version: 4.5.1(@types/node@20.10.4)
-      vite-tsconfig-paths:
-        specifier: ^4.2.2
-        version: 4.2.2(vite@4.5.1)
 
   remote:
     dependencies:

@@ -8,10 +8,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'homePage',
-      filename: 'remoteHomePage.js',
+      name: 'home',
+      filename: 'homepage.js',
       exposes: {
-        './App': './src/App',
+        './App': './src/App.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
