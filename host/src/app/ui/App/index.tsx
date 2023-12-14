@@ -1,20 +1,19 @@
 import { BrowserRouter } from 'react-router-dom';
-import { AppRouter } from './router';
+import { AppRouter } from '../../router';
 import { AppNavigation } from '@/features/navigation';
-import './theme/index.css';
 import { Suspense } from 'react';
+import { Container } from '@/shared';
+import '../../theme/global.css';
 
-function App() {
+export const App = () => {
   return (
     <BrowserRouter>
-      <div className="App">
+      <Container>
         <AppNavigation />
         <Suspense fallback="Loading page...">
           <AppRouter />
         </Suspense>
-      </div>
+      </Container>
     </BrowserRouter>
   );
-}
-
-export default App;
+};
