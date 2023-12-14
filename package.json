@@ -5,6 +5,7 @@
   "scripts": {
     "build": "pnpm --parallel --filter \"./**\" build",
     "serve": "pnpm --parallel --filter \"./**\" preview",
+    "preview": "pnpm build && pnpm serve",
     "build:remotes": "pnpm --parallel --filter \"./homepage\" \"./about\" build",
     "serve:remotes": "pnpm --parallel --filter \"./homepage\" \"./about\" serve",
     "dev:hosts": "pnpm --filter \"./host\" dev",
