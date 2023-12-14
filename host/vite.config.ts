@@ -8,9 +8,9 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'app',
+      name: 'hostApp',
       remotes: {
-        remoteApp: 'http://localhost:5001/assets/remoteEntry.js',
+        remoteApp: 'http://localhost:5001/assets/remoteHomePage.js',
       },
       shared: ['react', 'react-dom'],
     }),

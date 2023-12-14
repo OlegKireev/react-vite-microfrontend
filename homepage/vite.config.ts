@@ -8,10 +8,10 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'remote_app',
-      filename: 'remoteEntry.js',
+      name: 'homePage',
+      filename: 'remoteHomePage.js',
       exposes: {
-        './Button': './src/components/Button',
+        './App': './src/App',
       },
       shared: ['react', 'react-dom'],
     }),
