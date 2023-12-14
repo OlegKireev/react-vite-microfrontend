@@ -11,7 +11,7 @@ export default defineConfig({
       name: 'about',
       filename: 'aboutpage.js',
       exposes: {
-        './App': './src/App.tsx',
+        './App': './src/app/index.ts',
       },
       shared: ['react', 'react-dom'],
     }),

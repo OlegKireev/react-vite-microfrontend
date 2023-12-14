@@ -11,7 +11,7 @@ export default defineConfig({
       name: 'home',
       filename: 'homepage.js',
       exposes: {
-        './App': './src/App.tsx',
+        './App': './src/app/index.ts',
       },
       shared: ['react', 'react-dom'],
     }),
