@@ -1,24 +1,22 @@
 import { defineConfig } from 'vite';
-import federation from '@originjs/vite-plugin-federation';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import federation from '@originjs/vite-plugin-federation';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'app',
-      remotes: {
-        homepage: 'http://localhost:5001/assets/homepage.js',
-        aboutpage: 'http://localhost:5002/assets/aboutpage.js',
+      name: 'about',
+      filename: 'aboutpage.js',
+      exposes: {
+        './App': './src/App.tsx',
       },
       shared: ['react', 'react-dom'],
     }),
+    tsconfigPaths(),
   ],
-  resolve: {
-    alias: [{ find: '@', replacement: path.join(__dirname, 'src') }],
-  },
   build: {
     modulePreload: false,
     target: 'esnext',
