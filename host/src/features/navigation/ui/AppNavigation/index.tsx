@@ -1,14 +1,24 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './styles.module.css';
 
 export const AppNavigation = function AppNavigation() {
   return (
     <ul className={styles.appNavigation}>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink
+          to="/"
+          className={styles.link}
+        >
+          Home
+        </NavLink>
       </li>
       <li>
-        <Link to="/about">About</Link>
+        <NavLink
+          to="/about"
+          className={styles.link}
+        >
+          About
+        </NavLink>
       </li>
     </ul>
   );
