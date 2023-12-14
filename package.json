@@ -8,7 +8,8 @@
     "preview": "pnpm build && pnpm serve",
     "build:remotes": "pnpm --parallel --filter \"./homepage\" \"./about\" build",
     "serve:remotes": "pnpm --parallel --filter \"./homepage\" \"./about\" serve",
-    "dev:hosts": "pnpm --filter \"./host\" dev",
+    "dev:root": "pnpm --filter \"./root\" dev",
+    "dev": "pnpm dev:root",
     "stop": "kill-port 5000 5001 5002"
   },
   "devDependencies": {

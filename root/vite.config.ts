@@ -8,7 +8,7 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'app',
+      name: 'root',
       remotes: {
         homepage: 'http://localhost:5001/assets/homepage.js',
         aboutpage: 'http://localhost:5002/assets/aboutpage.js',
