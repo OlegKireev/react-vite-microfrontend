@@ -1,11 +1,19 @@
+import { BrowserRouter } from 'react-router-dom';
 import { AppRouter } from './router';
+import { AppNavigation } from '@/features/navigation';
 import './theme/index.css';
+import { Suspense } from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <AppRouter />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <AppNavigation />
+        <Suspense fallback="Loading page...">
+          <AppRouter />
+        </Suspense>
+      </div>
+    </BrowserRouter>
   );
 }
 

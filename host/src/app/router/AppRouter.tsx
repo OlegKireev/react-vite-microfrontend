@@ -1,11 +1,19 @@
-import { Suspense } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import { router } from './router';
+import { lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
-export const AppRouter = function AppRouter() {
-  return (
-    <Suspense fallback="Loading page...">
-      <RouterProvider router={router} />
-    </Suspense>
-  );
-};
+// Microfrontend routes
+const HomePage = lazy(() => import('homepage/App'));
+const AboutPage = lazy(() => import('aboutpage/App'));
+
+export const AppRouter = () => (
+  <Routes>
+    <Route
+      path="/"
+      element={<HomePage />}
+    />
+    <Route
+      path="/about"
+      element={<AboutPage />}
+    />
+  </Routes>
+);
