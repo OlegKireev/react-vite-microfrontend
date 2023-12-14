@@ -39,6 +39,9 @@ importers:
       vite:
         specifier: ^4.0.5
         version: 4.5.1(@types/node@20.10.4)
+      vite-tsconfig-paths:
+        specifier: ^4.2.2
+        version: 4.2.2(vite@4.5.1)
 
   remote:
     dependencies:
@@ -64,6 +67,9 @@ importers:
       vite:
         specifier: ^4.0.5
         version: 4.5.1(@types/node@20.10.4)
+      vite-tsconfig-paths:
+        specifier: ^4.2.2
+        version: 4.2.2(vite@4.5.1)
 
 packages:
 
@@ -708,6 +714,10 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /globrex@0.1.2:
+    resolution: {integrity: sha512-uHJgbwAMwNFf5mLst7IWLNg14x1CkeqglJb/K3doi4dw6q2IvAAmM/Y81kevy83wP+Sst+nutFTYOGg3d1lsxg==}
+    dev: true
+
   /has-flag@3.0.0:
     resolution: {integrity: sha512-sKJf1+ceQBr4SMkvQnBDNDtf4TXpVhVGateu0t918bl30FnbE2m4vNLX+VWe/dpjlb+HugGYzW7uQXH98HPEYw==}
     engines: {node: '>=4'}
@@ -845,6 +855,17 @@ packages:
     engines: {node: '>=4'}
     dev: true
 
+  /tsconfck@2.1.2:
+    resolution: {integrity: sha512-ghqN1b0puy3MhhviwO2kGF8SeMDNhEbnKxjK7h6+fvY9JAxqvXi8y5NAHSQv687OVboS2uZIByzGd45/YxrRHg==}
+    engines: {node: ^14.13.1 || ^16 || >=18}
+    hasBin: true
+    peerDependencies:
+      typescript: ^4.3.5 || ^5.0.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+    dev: true
+
   /undici-types@5.26.5:
     resolution: {integrity: sha512-JlCMO+ehdEIKqlFxk6IfVoAUVmgz7cU7zD/h9XZ0qzeosSHmUJVOzSQvvYSYWXkFXC+IfLKSIffhv0sVZup6pA==}
     dev: true
@@ -858,6 +879,23 @@ packages:
       browserslist: 4.22.2
       escalade: 3.1.1
       picocolors: 1.0.0
+    dev: true
+
+  /vite-tsconfig-paths@4.2.2(vite@4.5.1):
+    resolution: {integrity: sha512-dq0FjyxHHDnp0uS3P12WEOX2W7NeuLzX9AWP38D7Zw2CTbFErapwQVlCiT5DMJcVWKQ1MMdTe92PZl/rBQ7qcw==}
+    peerDependencies:
+      vite: '*'
+    peerDependenciesMeta:
+      vite:
+        optional: true
+    dependencies:
+      debug: 4.3.4
+      globrex: 0.1.2
+      tsconfck: 2.1.2
+      vite: 4.5.1(@types/node@20.10.4)
+    transitivePeerDependencies:
+      - supports-color
+      - typescript
     dev: true
 
   /vite@4.5.1(@types/node@20.10.4):
