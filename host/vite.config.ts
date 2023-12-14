@@ -19,6 +19,11 @@ export default defineConfig({
   resolve: {
     alias: [{ find: '@', replacement: path.join(__dirname, 'src') }],
   },
+  preview: {
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
+  },
   build: {
     modulePreload: false,
     target: 'esnext',
