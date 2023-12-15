@@ -1591,9 +1591,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-vite@workspace:.":
+"react-vite-microfrontend@workspace:.":
   version: 0.0.0-use.local
-  resolution: "react-vite@workspace:."
+  resolution: "react-vite-microfrontend@workspace:."
   dependencies:
     "@originjs/vite-plugin-federation": "npm:^1.2.3"
     kill-port: "npm:^2.0.1"
