@@ -5,6 +5,7 @@
   "scripts": {
     "build": "yarn workspaces foreach --all --parallel run build",
     "serve": "yarn workspaces foreach --all --exclude . --parallel -i run preview",
+    "dev": "yarn workspaces foreach --all --exclude . --parallel -i run dev",
     "preview": "yarn build && yarn serve",
     "stop": "kill-port 5000 5001 5002"
   },
