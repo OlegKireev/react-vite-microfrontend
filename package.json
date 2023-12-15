@@ -1,7 +1,7 @@
 {
-  "name": "react-vite",
-  "private": true,
-  "version": "1.0.0",
+  "name": "react-vite-microfrontend",
+  "description": "Example of micro-frontend monorepo structure with react and vite",
+  "version": "0.1.0",
   "scripts": {
     "build": "yarn workspaces foreach --all --parallel run build",
     "serve": "yarn workspaces foreach --all --exclude . --parallel -i run preview",
@@ -16,5 +16,10 @@
   },
   "workspaces": [
     "packages/**"
-  ]
+  ],
+  "author": {
+    "name": "Oleg Kireev",
+    "email": "flucky@mail.ru",
+    "url": ""
+  }
 }
