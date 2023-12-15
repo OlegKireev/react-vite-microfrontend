@@ -20,6 +20,9 @@
   "author": {
     "name": "Oleg Kireev",
     "email": "flucky@mail.ru",
-    "url": ""
+    "url": "https://github.com/OlegKireev/react-vite-microfrontend"
+  },
+  "repository": {
+    "url": "https://github.com/OlegKireev/react-vite-microfrontend"
   }
 }
