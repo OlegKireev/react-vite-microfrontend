@@ -14,8 +14,6 @@
     "kill-port": "^2.0.1"
   },
   "workspaces": [
-    "root",
-    "homepage",
-    "about"
+    "packages/**"
   ]
 }
