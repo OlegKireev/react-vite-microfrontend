@@ -3,17 +3,19 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "build": "pnpm --parallel --filter \"./**\" build",
-    "serve": "pnpm --parallel --filter \"./**\" preview",
-    "preview": "pnpm build && pnpm serve",
-    "build:remotes": "pnpm --parallel --filter \"./homepage\" \"./about\" build",
-    "serve:remotes": "pnpm --parallel --filter \"./homepage\" \"./about\" serve",
-    "dev:root": "pnpm --filter \"./root\" dev",
-    "dev": "pnpm dev:root",
+    "build": "yarn workspaces foreach --all --parallel run build",
+    "serve": "yarn workspaces foreach --all --exclude . --parallel -i run preview",
+    "preview": "yarn build && yarn serve",
     "stop": "kill-port 5000 5001 5002"
   },
+  "packageManager": "yarn@4.0.1",
   "devDependencies": {
-    "kill-port": "^2.0.1",
-    "@originjs/vite-plugin-federation": "^1.2.3"
-  }
+    "@originjs/vite-plugin-federation": "^1.2.3",
+    "kill-port": "^2.0.1"
+  },
+  "workspaces": [
+    "root",
+    "homepage",
+    "about"
+  ]
 }
