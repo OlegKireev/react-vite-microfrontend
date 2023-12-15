@@ -7,7 +7,7 @@ export const PageErrorMessage = () => {
       {isDev && (
         <p>
           If you want to render the whole application with all micro-frontends
-          run `pnpm preview` in the root of repository
+          together - run <code>`yarn preview`</code> in the root of repository
         </p>
       )}
     </div>
